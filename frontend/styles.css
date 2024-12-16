@@ -1,0 +1,491 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-style: "Roboto Mono", sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+html, body{
+  scroll-behavior:smooth;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #333333;
+  color: #fff;
+  border-bottom: 2px solid #ff0101;
+}
+
+
+nav .logo {
+  display: flex;
+  align-items: center;
+  margin-left: 60px;
+}
+
+nav .logo img {
+  width: 40px; /* Ajusta el tamaño del logo según sea necesario */
+  height: 40px;
+  animation: funAnimation 3s infinite;
+}
+
+nav .logo img:hover {
+  transform: rotate(360deg);
+}
+
+nav .logo h1 {
+  font-size: 34px;
+  letter-spacing: 10px;
+  margin-left: 50px;
+}
+
+nav .logo h1 span:nth-child(even) {
+  display: inline-block;
+  animation: crazyEffect 1s infinite;
+}
+
+@keyframes crazyEffect {
+  0% {
+    color: #fff;
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    color: #ff0000;
+    transform: translate(5px, -5px) rotate(10deg);
+  }
+  50% {
+    color: #f7f2f2;
+    transform: translate(-5px, 5px) rotate(-10deg);
+  }
+  75% {
+    color: #ff0000;
+    transform: translate(5px, 5px) rotate(10deg);
+  }
+  100% {
+    color: #fff;
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: #ff0000;
+  transition: width 0.3s ease-in-out;
+  -webkit-transition: width 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+  left: 0;
+  background: #ff0202;
+}
+
+nav ul li a:hover {
+  color: #f00000;
+}
+nav ul li.nav-logo {
+  display: flex;
+  align-items: right;
+}
+
+nav ul li.nav-logo img {
+  width: 50px; /* Ajusta el tamaño del logo según sea necesario */
+  height: 50px;
+}
+
+@keyframes funAnimation {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(90deg) scale(1.2);
+  }
+  50% {
+    transform: rotate(180deg) scale(1);
+  }
+  75% {
+    transform: rotate(270deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+header {
+  position: relative;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 0;
+}
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 600px;
+  background: url("./img/riverjpg.webp") no-repeat center center/cover; /* Ajusta la ruta de la imagen */
+  background-size: cover; /* Ajusta la imagen para que se contenga dentro del contenedor */
+  filter: brightness(0.5); /* Baja el brillo de la imagen */
+  z-index: -1; /* Coloca la imagen detrás del contenido */
+}
+
+header .header-content {
+  position: relative;
+  z-index: 1;
+  /* Asegura que el contenido esté por encima de la imagen */
+}
+
+header .header-content h2 {
+  font-size: 48px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: pulseColor 3s infinite;
+}
+
+@keyframes pulseColor {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+    color: #030303;
+  }
+  25% {
+    opacity: 1;
+    transform: scale(1);
+    color: #f9f5f5;
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+    color: #0a0a0a;
+  }
+  75% {
+    opacity: 1;
+    transform: scale(1);
+    color: #f7f2f2;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.95);
+    color: #070707;
+  }
+}
+
+.separator {
+  width: 100%;
+  height: 7px;
+  background: linear-gradient(
+    to right,
+    #f0eded,
+    #f80101,
+    #f0ecec
+  ); /* Gradiente de colores */
+  border-top: 2px solid #1c1b1b; /* Borde superior */
+  border-bottom: 2px solid #000000; /* Borde inferior */
+  margin-top: -5px; /* Ajusta el margen superior para que quede pegado al header */
+}
+.portada {
+  background-color: #030303;
+  width: 100%;
+  height: auto;
+  color: #f7f2f2;
+  margin-top: 0px;
+  border: 3px solid #454343; /* Borde grueso rojo */
+  padding: 0px;
+  font-family: "Comic Sans MS", cursive, sans-serif; /* Fuente estilo historieta */
+}
+
+.portada h1 {
+  font-size: 48px;
+  padding: 20px;
+  text-align: center;
+  text-transform: uppercase; /* Texto en mayúsculas */
+  background: linear-gradient(
+    to right,
+    #ff0000,
+    #ffffff
+  ); /* Gradiente de rojo a blanco */
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.portada p {
+  font-size: 20px;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  color: #ffffff; /* Color blanco */
+  text-shadow: 1px 1px 0 #000; /* Sombra negra */
+}
+
+#lista-idolos {
+  display: flex;
+  flex-wrap: wrap; /* Permite que las tarjetas se ajusten a la siguiente línea si no caben en una sola */
+  justify-content: center; /* Centra las tarjetas horizontalmente */
+  gap: 20px; /* Espacio entre las tarjetas */
+  padding: 20px;
+}
+
+.idolo-card {
+  background: linear-gradient(
+    145deg,
+    #1e1e1e,
+    #040404
+  ); /* Fondo cinematográfico */
+  border: 2px solid #000000; /* Borde oscuro */
+  border-radius: 15px; /* Bordes redondeados */
+  
+  overflow: hidden;
+  margin: 20px;
+  padding: 20px;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  flex: 1 1 calc(33.333% - 40px); /* Tres tarjetas por fila */
+}
+
+@media (min-width: 768px) {
+  .idolo-card {
+    flex: 1 1 calc(50% - 40px); /* Dos tarjetas por fila en pantallas medianas */
+  }
+}
+
+@media (min-width: 1024px) {
+  .idolo-card {
+    flex: 1 1 calc(25% - 40px); /* Cuatro tarjetas por fila en pantallas grandes */
+  }
+}
+
+.idolo-card:hover {
+  transform: translateY(-10px) scale(1.05); /* Efecto de elevación y escala */
+  box-shadow: 0 10px 20px rgb(247, 247, 247), 0 6px 6px rgba(218, 216, 216, 0.2); /* Sombra más pronunciada */ /* Sombra más pronunciada al pasar el cursor */
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.idolo-card img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: contain; /* Mantiene la proporción de la imagen y la recorta si es necesario */
+  border-bottom: 2px solid #fd0606;
+  padding-bottom: 10px;
+}
+
+.idolo-card h2 {
+  font-size: 24px;
+  color: #ff0000;
+  margin: 10px 0;
+  text-transform: uppercase; /* Texto en mayúsculas */
+  letter-spacing: 1px; /* Espaciado entre letras */
+}
+
+.idolo-card p {
+  font-size: 16px;
+  color: #ddd; /* Color gris claro */
+  margin: 5px 0;
+}
+
+.idolo-card p strong {
+  color: #ff0000; /* Color rojo para los títulos */
+}
+
+.header-idolos {
+  position: relative;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 0;
+}
+.header-idolos::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("./img/muñeco.jpg") no-repeat center center; /* Ajusta la ruta de la imagen */
+  background-size: cover; /* Ajusta la imagen para que se contenga dentro del contenedor */
+  filter: brightness(0.5); /* Baja el brillo de la imagen */
+  z-index: -1; /* Coloca la imagen detrás del contenido */
+}
+
+.header-idolos .header-content-idolos {
+  position: relative;
+  z-index: 1;
+  width: 100%; /* Asegura que el contenido ocupe todo el ancho */
+  display: flex;
+  padding-left: 30px;
+  align-items: center;
+}
+
+.header-idolos .header-content-idolos h2 {
+  font-size: 78px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  letter-spacing: 3px;
+}
+
+.letter {
+  opacity: 0;
+  animation: fadeIn 0.5s forwards, fadeOut 0.5s forwards 3s;
+  background: linear-gradient(
+    to right,
+    #ff0000 50%,
+    #ffffff 50%
+  ); /* Gradiente de rojo a blanco */
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
+.muñeco {
+  width: 100px; /* Ajusta el tamaño de la imagen */
+  height: auto; /* Mantiene la proporción de la imagen */
+  transition: transform 0.3s ease-in-out; /* Añade una transición suave */
+  padding-right: 20px;
+}
+
+.muñeco:hover {
+  transform: scale(1.1); /* Aumenta el tamaño de la imagen al pasar el cursor */
+}
+
+.main-idolos{
+  background-color: #333333;
+}
+
+.section-separator {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #e0e0e0;
+  border-top: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+  position: relative;
+}
+
+.section-separator h2 {
+  font-size: 36px;
+  color: #333;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.section-separator::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ccc;
+  z-index: 0;
+}
+
+.titulo-idolos {
+  background-color: #030303;
+  width: 100%;
+  height: auto;
+  color: #f7f2f2;
+  margin-top: 0px;
+  padding: 0px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  position: relative;
+}
+.titulo-idolos::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px; /* Ajusta la altura del borde */
+  background: linear-gradient(to right, #ff0000, #ffffff); /* Gradiente de rojo a blanco */
+}
+
+.titulo-idolos h1 {
+  font-size: 48px;
+  padding: 20px;
+  text-align: center;
+  text-transform: uppercase; /* Texto en mayúsculas */
+  color: white;
+  text-shadow: 3px 4px 6px #ff0000;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+footer img{
+  padding-top: 7px ;
+  width: 50px;
+  height: 50px;
+
+}
