@@ -10,7 +10,7 @@ const PORT = process.env.PORT ?? 3000;
 app.use(cors());
 
 // Rutas
-app.get("/", (req, res) => {
+app.get("/api/idolos", (req, res) => {
   res.json(idolos);
 });
 

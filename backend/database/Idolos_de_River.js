@@ -49,7 +49,78 @@ const idolos = [
         lugarNacimiento: 'Villa Atamisqui, Santiago del Estero',
         nacionalidad: 'Argentina',
         imagen: 'https://i.pinimg.com/474x/69/1a/01/691a013675fb4a61aec36a9f5fb3432d.jpg',
-    }
+    },
+    {
+        id: 6,
+        nombre: 'Amadeo Carrizo',
+        apodo: 'Tarzan',
+        posicion: 'Arquero',
+        fechaNacimiento: '12 de junio de 1926',
+        lugarNacimiento: 'Rufino, Santa Fe',
+        nacionalidad: 'Argentina',
+        imagen: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOIxsrh9-O2QoigYH62d4wo6TtJtWpEeJzQw&s'
+    },
+    {
+        id: 7,
+        nombre: 'Angel Amadeo Labruna',
+        apodo: 'El Feo',
+        posicion: 'Delantero',
+        fechaNacimiento: '28 de septiembre de 1918',
+        lugarNacimiento: 'Buenos Aires, Argentina',
+        nacionalidad: 'Argentina',
+        imagen: 'https://foto.lapaginamillonaria.com/res/fotogalerias/legacy/n74476.jpg',
+    },
+    {
+        id: 8,
+        nombre: 'Fernando Cavenaghi',
+        apodo: 'Cavegol',
+        posicion: 'Delantero',
+        fechaNacimiento: '21 de septiembre de 1983',
+        lugarNacimiento: 'O´Brien, Buenos Aires',
+        nacionalidad: 'Argentina',
+        imagen: 'https://pbs.twimg.com/media/FcYP0cdXkAIxqfJ.jpg'
+    },
+    {
+        id: 9,
+        nombre: 'Juan Pablo Sorín',
+        apodo: 'Juampi',
+        posicion: 'Defensor',
+        fechaNacimiento: '5 de mayo de 1976',
+        lugarNacimiento: 'Buenos Aires, Argentina',
+        nacionalidad: 'Argentina',
+        imagen: 'https://pbs.twimg.com/media/Ef5Ik8vWAAEhx_u.jpg'
+    },
+    {
+        id: 10,
+        nombre: 'Pablo César Aimar',
+        apodo: 'Payasito',
+        posicion: 'Mediocampista',
+        fechaNacimiento: '3 de noviembre de 1979',
+        lugarNacimiento: 'Río Cuarto, Córdoba',
+        nacionalidad: 'Argentina',
+        imagen: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmnYXVprQFbEAXnXtJVLGP06721dff8duXWg&s'
+    },
+    {
+        id: 11,
+        nombre: 'Javier Pedro Saviola',
+        apodo: 'Conejito',
+        posicion: 'Delantero',
+        fechaNacimiento: '11 de diciembre de 1981',
+        lugarNacimiento: 'Buenos Aires, Argentina',
+        nacionalidad: 'Argentina',
+        imagen: 'https://img.europapress.es/fotoweb/fotonoticia_20160107212840_690.jpg'
+    },
+    {
+        id: 20,
+        nombre: 'Ubaldo Matildo Fillol',
+        apodo: 'Pato',
+        posicion: 'Arquero',
+        fechaNacimiento: '21 de julio de 1950',
+        lugarNacimiento: 'San Miguel del Monte, Buenos Aires',
+        nacionalidad: 'Argentina',
+        imagen: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfyKZVD07eRLR-Q9-i376wuLj63wavxCU6OA&s'
+    },
+    
 ]
 
 export default idolos
